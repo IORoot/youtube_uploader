@@ -14,6 +14,13 @@ You'll need to configure two github secret variables called:
 - `REQUEST_TOKEN_B64`
 
 These are the Base64 versions of the client_secrets.json and request_token.json files.
+
+```
+base64 -i client_secrets.json -o client_secrets.b64
+base64 -i request.token -o request.token.b64
+```
+
+Follow the instruction at [https://github.com/porjo/youtubeuploader](https://github.com/porjo/youtubeuploader) 
  
 
 ## Usage:

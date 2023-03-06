@@ -2,22 +2,19 @@ name: Upload to YouTube
 
 on:
 
-  push:
-    branches:
-      - main
-
   workflow_dispatch:
 
+  repository_dispatch:
+    types: social_exporter_webhook
+
 env:
-  VIDEO_URL: ${{ github.event.head_commit.message }}
+
+  VIDEO_URL: ${{ github.event.client_payload.VIDEO_URL }}
 
 jobs:
 
   build:
 
-    # The commit message should be the URL of the video you want to retrieve.
-    if: "contains(github.event.head_commit.message, 'http')"
-    
     runs-on: ubuntu-latest
 
     steps:

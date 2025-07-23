@@ -1,3 +1,5 @@
+![header](https://raw.githubusercontent.com/IORoot/youtube_uploader/refs/heads/master/header.jpg)
+
 # Youtube Poster github action
 
 This is a very simple github action that will post to your youtube channel.
